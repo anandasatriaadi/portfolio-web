@@ -4,9 +4,9 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="tailwind.min.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="boxicons-2.0.9/css/boxicons.min.css">
+        <link rel="stylesheet" href="./css/tailwind.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./boxicons-2.0.9/css/boxicons.min.css">
         <title>Portfolio Ananda</title>
         <script src="jquery-3.6.0.js"></script>
     </head>
@@ -36,7 +36,7 @@
                         </linearGradient>
                         <path class="blob" fill="url(#linearGradient856)" d="m 47.071343,21.402525 c 0,13.464407 -7.040803,23.906995 -25.985864,27.497769 C 7.8565933,51.407646 -4.662789,38.080233 1.7141987,26.221722 4.07655,21.828744 7.8000873,-2.0469267 21.085479,0.1413639 41.164469,3.4486556 47.071343,7.9381185 47.071343,21.402525 Z"/>
                     </svg>
-                    <img src="Ananda-Smile.png" class="w-52 h-full z-20">
+                    <img src="./res/Ananda-Smile.png" class="w-52 h-full z-20">
                 </div>
                 <!-- NAMA and JURUSAN -->
                 <div class="-ml-12 md:-ml-20 bg-opacity-0 p-8 rounded-xl">
@@ -172,20 +172,7 @@
             </footer>
         </div>
     </body>
-    <script>
-        $(document).ready(function() {
-            $('.wave').each(function () {
-                let box = $(this)[0].getBBox();
-                $(this).parent().removeAttr('viewbox');
-                if($(this).parent().hasClass('wave-flip')) {
-                    $(this).parent()[0].setAttribute('viewBox', '0 '+ Number(320-box.height) +' 1440 ' + box.height);
-                } else {
-                    $(this).parent()[0].setAttribute('viewBox', '0 0 1440 ' + box.height);
-                }
-            })
-        });
-    </script>
-
+    
     <style>
         .gradient {
             background: linear-gradient(45deg, #fff268 0%, #50c2ff 100%) no-repeat fixed!important;
