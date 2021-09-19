@@ -3,32 +3,35 @@
     <title>Web Warung Tegal</title>
     <style type="text/css">
         .bg-gray {
-            background-color: #666666;
+            background-color: #262626;
         }
         header, section, footer, aside, nav, article, figure, figcaption {
             display: block;}
         body {
-            color: #666666;
-            background-color: #f9f8f6;
+            color: #ffe9e9;
+            background-color: #262626;   
             background-image: url("darkwood.jpg");
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            font-family: Georgia, Times, serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.4em;
-            margin: 0px;}
+            margin: 4rem 2rem;
+        }
         .wrapper {
-            width: 940px;
+            max-width: 940px;
             margin: 20px auto 20px auto;
             border: 2px solid #ffffff;
-            background-color: #ffffff;}
+            background-color: #262626;
+            border-radius: 20px;
+        }
         header {
             padding: 1rem;
         }
         nav, footer {
             clear: both;
             color: #ffffff;
-            background-color: #aeaca8;
+            background-color: #121212;
             height: 30px;}
         nav ul {
             margin: 0px;
@@ -39,14 +42,13 @@
         nav li a {
             color: #ffffff;}
         nav li a:hover, nav li a.current {
-            color: #000000;}
+            color: #666666;}
         section.courses {
             float: left;
             width: 659px;
             border-right: 1px solid #eeeeee;}
         article {
             clear: both;
-            overflow: auto;
             width: 100%;}
         hgroup {
             margin-top: 40px;}
@@ -87,7 +89,96 @@
             color: #de6581;}
         footer {
             font-size: 80%;
-            padding: 7px 0px 0px 20px;}
+            padding: 7px 0px 0px 20px;
+            border-radius: 20px;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: calc(100% - 2rem);
+            position: relative;
+            padding: 0 1rem;
+        }
+        
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            height: 350px;
+            object-fit: cover;
+        }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 6px 6px 0;
+            user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+            right: 1rem;
+            border-radius: 6px 0 0 6px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.4);
+        }
+        
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 0;
+            right: 1rem;
+        }
+        
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 0.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
     </style>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -95,10 +186,10 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="bg-gray">
-            <h1 class="bg-gray" style="color: #eeeeee; margin: 0; padding: 2rem 0rem 0rem 30px;">Warung Tegal</h1>
+        <header>
+            <h1 style="color: #eeeeee; margin: 0 0 1rem; padding: 2rem 0rem 0rem 30px;">Warung Tegal</h1>
             <hr>
-            <h2 class="bg-gray" style="color: #eeeeee; margin: 0; padding: 0rem 0rem 2rem 30px;">Warungnya Indonesia</h2>
+            <h2 style="color: #eeeeee; margin: 0; padding: 0rem 0rem 2rem 30px;">Warungnya Indonesia</h2>
             <nav class="bg-gray">
                 <ul>
                     <li><a href="" class="current">Beranda</a></li>
@@ -109,6 +200,22 @@
                 </ul>
             </nav>
         </header>
+        <div class="slideshow-container" style="margin: 20px auto 0px;">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade" style="display: block;">
+                <div class="numbertext">1 / 2</div>
+                <img src="soto.jpg" style="width:100%; border-radius: 20px;">
+            </div>
+            
+            <div class="mySlides fade" style="display: none;">
+                <div class="numbertext">2 / 2</div>
+                <img src="pecel.jpeg" style="width:100%; border-radius: 20px;">
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
         <section class="courses">
             <article>
                 <figure>
@@ -146,10 +253,40 @@
                 <p>Warung Tegal<br>
                     di seluruh indonesia
             </p></section>
+            <audio controls="" autoplay="">
+                <source src="andaru.m4a" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </aside>
         <footer>
             © 2015 Warung Tegal
         </footer>
     </div><!-- .wrapper -->
 
-</body></html>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
