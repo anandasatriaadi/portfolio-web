@@ -1,0 +1,27 @@
+.gradient {
+  background: linear-gradient(-45deg, #C6FFDD, #FBD786, #f7797d);
+  background-size: 400% 400%;
+  animation: gradient 8s ease-in-out infinite;
+}
+
+.gradient-invert {
+  background: linear-gradient(-45deg, #f7797d, #FBD786, #C6FFDD);
+  background-size: 400% 400%;
+  animation: gradient 8s ease-in-out infinite;
+}
+
+.min-h-100vh {
+  min-height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
