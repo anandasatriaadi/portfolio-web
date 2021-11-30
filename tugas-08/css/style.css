@@ -8,6 +8,7 @@
 .gradient-invert {
   background: linear-gradient(-45deg, #f7797d, #fbd786, #c6ffdd);
   background-size: 400% 400%;
+  background-position: 0% 50%;
   /* animation: gradient 8s ease-in-out infinite; */
 }
 
