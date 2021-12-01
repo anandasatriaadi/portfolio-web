@@ -40,7 +40,7 @@ function getBenua() {
   xhttp.send();
 }
 
-function getDept() {
+function getNegara() {
   let benua = document.getElementById("select-benua").value;
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function () {
