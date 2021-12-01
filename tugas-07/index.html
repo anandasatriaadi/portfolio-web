@@ -70,14 +70,11 @@
 
       <div>
         <div class="collapse text-center border-0" id="displayText">
-          <div
-            class="card card-body text-center border-0"
-            id="text-container"
-          ></div>
+          <div class="card card-body text-center border-0" id="ajax-text"></div>
         </div>
 
         <div class="collapse border-0" id="displayFilter">
-          <div class="card card-body border-0" id="filter-container">
+          <div class="card card-body border-0">
             <div class="row">
               <h4 class="text-center">Filter Fakultas</h4>
               <div class="col">
@@ -85,8 +82,8 @@
                   <label>Fakultas</label>
                   <select
                     class="form-select"
-                    name="fakultas"
-                    id="fakultas"
+                    name="select-fakultas"
+                    id="select-fakultas"
                     onchange="getDept()"
                   ></select>
                 </div>
@@ -94,8 +91,8 @@
                   <label>Departemen</label>
                   <select
                     class="form-select"
-                    name="departemen"
-                    id="departemen"
+                    name="select-departemen"
+                    id="select-departemen"
                   ></select>
                 </div>
               </div>
