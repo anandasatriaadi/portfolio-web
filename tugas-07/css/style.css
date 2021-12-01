@@ -1,0 +1,74 @@
+.gradient {
+  background: linear-gradient(-45deg, #c6ffdd, #fbd786, #f7797d);
+  background-size: 400% 400%;
+  background-position: 100% 50%;
+}
+
+.gradient-invert {
+  background: linear-gradient(-45deg, #f7797d, #fbd786, #c6ffdd);
+  background-size: 400% 400%;
+  background-position: 0% 50%;
+  animation: gradient 8s ease-in-out infinite;
+}
+
+.btn-primary {
+  border: none;
+  border-color: #f7797d;
+  background: linear-gradient(-45deg, #f7797d, #fbd786);
+  background-size: 200% 200%;
+  background-position: 100% 50%;
+  transition: all 150ms ease-in-out;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:focus-visible,
+.btn-primary:focus-within {
+  background: linear-gradient(-45deg, #f7797d, #fbd786);
+  background-position: 0% 50%;
+  background-size: 200% 200%;
+  transition: all 150ms ease-in-out;
+}
+
+.min-h-100vh {
+  min-height: 100vh;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+}
+
+.link-tugas-container {
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.link-tugas {
+  display: block;
+  text-align: center;
+  border-radius: 999px;
+  text-decoration: none;
+  transition-duration: 200ms;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.link-tugas:hover {
+  display: block;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.15);
+  transition-duration: 200ms;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
