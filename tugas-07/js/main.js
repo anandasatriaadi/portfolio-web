@@ -20,37 +20,37 @@ function getText() {
   }
 }
 
-function getFakultas() {
+function getBenua() {
   const xhttp = new XMLHttpRequest();
 
   xhttp.onload = function () {
     const jsonResponse = JSON.parse(this.responseText);
-    let html = `<option label="Pilih Fakultas" hidden></option>`;
-    let idx = 0;
+    let htmlText = `<option label="Pilih Benua" hidden></option>`;
+    let index = 0;
     for (let x of Object.keys(jsonResponse)) {
-      html += `<option value='${idx}'>${x}</option>`;
-      idx++;
+      htmlText += `<option value='${index}'>${x}</option>`;
+      index++;
     }
-    document.getElementById("select-fakultas").innerHTML = html;
+    document.getElementById("select-benua").innerHTML = htmlText;
     document.getElementById(
-      "select-departemen"
-    ).innerHTML = `<option label="Pilih Departemen" hidden></option>`;
+      "select-negara"
+    ).innerHTML = `<option label="Pilih Negara" hidden></option>`;
   };
-  xhttp.open("GET", "/tugas-07/content/fakultas.json", true);
+  xhttp.open("GET", "/tugas-07/content/continents.json", true);
   xhttp.send();
 }
 
 function getDept() {
-  let fakultas = document.getElementById("select-fakultas").value;
+  let benua = document.getElementById("select-benua").value;
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function () {
     const jsonResponse = JSON.parse(this.responseText);
-    let html = `<option label="Pilih Departemen" hidden></option>`;
-    for (let x of Object.values(jsonResponse)[fakultas]) {
-      html += `<option>${x}</option>`;
+    let htmlText = `<option label="Pilih Negara" hidden></option>`;
+    for (let x of Object.values(jsonResponse)[benua]) {
+      htmlText += `<option>${x}</option>`;
     }
-    document.getElementById("select-departemen").innerHTML = html;
+    document.getElementById("select-negara").innerHTML = htmlText;
   };
-  xhttp.open("GET", "/tugas-07/content/fakultas.json", true);
+  xhttp.open("GET", "/tugas-07/content/continents.json", true);
   xhttp.send();
 }
